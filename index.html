@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una sorpresa especial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1: Inicio -->
+  <section id="screen-1" class="screen active">
+    <h1>Feliz cumpleaños mi niña</h1>
+    <img src="img/touka-inicio.png.jpeg" alt="Touka Inicio" style="width: 380px; height: 380px;">
+    <p>¿Quieres ver el regalo que hice para ti?</p>
+    <div class="btn-group">
+      <button class="btn-yes" onclick="goToScreen(2)">Sí</button>
+      <button class="btn-no" onclick="moveNoButton(this)">No</button>
+    </div>
+  </section>
+
+  <!-- PANTALLA 2: Te amo -->
+  <section id="screen-2" class="screen">
+    <h1>Te amo mi amor!!!</h1>
+    <img src="img/touka-corazon.png.jpeg" alt="Touka Corazón" style="width: 380px; height: 380px;">
+    <p>Este sitio web es solo para ti</p>
+    <button class="btn-next" onclick="goToScreen(3)">Siguiente</button>
+  </section>
+
+  <!-- PANTALLA 3: Menú de 3 regalos -->
+  <section id="screen-3" class="screen">
+    <h1>¡Regalos para ti!</h1>
+    <div class="gifts-grid">
+      <!-- Regalo 1: Música -->
+      <div class="gift-card" onclick="goToScreen(4)">
+        <img src="img/touka-musica.png.jpeg" alt="Música">
+        <span>Haz click</span>
+      </div>
+      <!-- Regalo 2: Flores / Mensajes -->
+      <div class="gift-card" onclick="goToScreen(5)">
+        <img src="img/touka-flores.png.jpeg" alt="Flores">
+        <span>Haz click</span>
+      </div>
+      <!-- Regalo 3: Pastel -->
+      <div class="gift-card" onclick="goToScreen(6)">
+        <img src="img/touka-pastel.png.jpeg" alt="Pastel">
+        <span>Haz click</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 4: Canción dedicada con notas musicales y reproductor directo -->
+  <section id="screen-4" class="screen">
+    <div style="position: absolute; top: 20px; left: 25px; font-size: 1.8rem; color: #ff8fab;">♫ 🎵 🎶</div>
+    <div style="position: absolute; top: 20px; right: 25px; font-size: 1.8rem; color: #ff8fab;">🎶 🎵 ♫</div>
+    
+    <h1>Te dedico esta canción</h1>
+    <div class="player-container">
+      <iframe 
+        src="https://www.youtube-nocookie.com/embed/xKJkzro8ArA?rel=0" 
+        title="VIDEOCLUB - En Nuit" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p style="margin: 0; font-size: 1.1rem;">
+        Te dedico esta canción porque cada palabra me hace pensar en ti y en todo lo que siento cuando estamos juntos... 💕
+      </p>
+    </div>
+    <button class="btn-back" onclick="goToScreen(3)" style="margin-top: 20px;">Volver a los regalos</button>
+  </section>
+
+  <!-- PANTALLA 5: Flores y mensajes (Diseño ordenado) -->
+  <section id="screen-5" class="screen">
+    <h1>Te mereces flores en tu día especial</h1>
+    <div class="flowers-layout">
+      <div class="notes-column">
+        <div class="note">Te amo de aquí hasta el infinito y mucho más</div>
+        <div class="note">Eres mi persona favorita en todo el mundo</div>
+        <div class="note">Contigo he creado mis recuerdos más bonitos</div>
+      </div>
+      <div>
+        <img src="img/touka-flores.png.jpeg" alt="Touka Flores" style="width: 260px; height: 260px; margin-bottom: 0;">
+      </div>
+      <div class="notes-column">
+        <div class="note">Eres mi lugar seguro y mi paz</div>
+        <div class="note">Quiero seguir viviendo mil aventuras a tu lado</div>
+        <div class="note">Tu alegría hace mis días más felices</div>
+      </div>
+    </div>
+    <button class="btn-back" onclick="goToScreen(3)" style="margin-top: 15px;">Volver a los regalos</button>
+  </section>
+
+  <!-- PANTALLA 6: Sopla la vela -->
+  <section id="screen-6" class="screen">
+    <h1>¡Sopla la vela mi amor!</h1>
+    <img src="img/touka-pastel.png.jpeg" alt="Touka Pastel" style="width: 380px; height: 380px;">
+    <button class="btn-next" onclick="goToScreen(7)">Ver mi carta para ti</button>
+  </section>
+
+  <!-- PANTALLA 7: Carta final -->
+  <section id="screen-7" class="screen">
+    <h1>¡Feliz cumpleaños mi bella novia!</h1>
+    <div class="letter-box">
+      <h2>Espero que te guste mi pequeña sorpresa amor</h2>
+      <p>Hoy quiero recordarte lo especial que eres y lo bonito que es tenerte en mi vida. Deseo de corazón que este nuevo año venga lleno de momentos que te hagan sonreír, sueños que poco a poco se hagan realidad y personas que sepan valorar el gran corazón que tienes.</p>
+      <p>Espero que nunca olvides lo mucho que vales. Mereces todo lo bonito que la vida pueda regalarte,te amo demasiado mi niña,de verdad demasiado💕.</p>
+    </div>
+    <div style="margin-top: 20px;">
+      <img src="img/touka-carta.png.jpeg" alt="Touka Carta" style="width: 220px; height: 220px;">
+    </div>
+    <button class="btn-back" onclick="goToScreen(3)">Volver al inicio</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
